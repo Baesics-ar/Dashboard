@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["nodejs_20"]
+
+[phases.build]
+cmds = ["npm run install:all", "npm run build"]
+
+[start]
+cmd = "NODE_ENV=production node backend/src/server.js"
